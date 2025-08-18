@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Neymar Maravilhoso</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="p-5">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <img src="img/logo.png" class="nav-img " loading="lazy">
+            <ul class="nav mt-5">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+            <div id="acessibilidade" class="menu-acessibilidade"> 
+                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false" aria-controls="opcoes-acessibilidade" aria-label="Abrir opções de acessibilidade">
+                    Acessibilidade
+                </button>
+                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista" style="display: none;">
+                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
+                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores">
+                        <i class="bi bi-brightness-high"></i>
+                    </button>         
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section id="inicio" class="my-5">
+            <div class="inicio-fundo d-flex justify-content-between align-items-center">
+                <div class="esquerda-conteudo">
+                    <h1 class="display-4 text-white fst-italic fw-bold">Bem-vindo ao Neymar Maravilhoso</h1>
+                    <img src="img/logo-2.png" class="mb-3" width="563" height="278" loading="lazy">
+                    <a href="#nossahistoria" class="btn btn-primary btn-lg botao-inicio fw-semibold">Conheça a História!</a>
+                </div>
+                <img src="img/neymar.jpg" alt="Neymar jogando futebol" title="Neymar, craque do futebol brasileiro" class="img-fluid img-inicio">
+            </div>
+        </section>
+
+        <section id="nossahistoria" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção sobre os melhores momentos da carreira de Neymar">
+            <div class="container d-flex align-items-center ">
+                <div class="col-4 d-flex justify-content-center ">
+                    <img src="img/neymar-em-campo.jpg" class="rounded-pill" width="273" height="331" loading="lazy">
+                </div>
+                <div class="col-5">
+                    <h2>Os Melhores Momentos de Neymar</h2>
+                    <p class="p-2">Neymar Jr. é considerado um dos maiores talentos do futebol mundial. Sua carreira começou
+                        no Santos, onde conquistou a Copa Libertadores e foi eleito o melhor jogador da América. Posteriormente,
+                        Neymar fez história no Barcelona, ao lado de Messi e Suárez, formando o temido trio MSN. Com o PSG, ele
+                        continuou sua jornada de conquistas, incluindo o título da Ligue 1 e a chegada à final da Liga dos Campeões.
+                        Além disso, sua marca na Seleção Brasileira também é notável, com vitórias em Copas das Confederações e
+                        medalha de ouro olímpica. Neymar é admirado por sua habilidade, visão de jogo e capacidade de fazer
+                        gols inesquecíveis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
+            <h2 class="text-center pt-5">Galeria de Momentos</h2>
+            <div class="container p-3 mt-3 fundo-galeria ">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4">
+                        <img src="img/neymar-campeao-libertadores.jpg" class="img-fluid rounded-5" loading="lazy">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/neymar-no-barcelona.jpg" class="img-fluid rounded-5" loading="lazy">
+                    </div>
+                </div>
+                <div class="row mt-4 justify-content-md-center">
+                    <div class="col-md-4">
+                        <img src="img/neymar-no-psg.jpg" class="img-fluid rounded-5" loading="lazy">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/neymar-olimpiadas.jpg" class="img-fluid rounded-5" loading="lazy">
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section id="contato">
+            <div class="container p-5 d-flex justify-content-center">
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
+                    <h2 class="mb-3">Entre em Contato</h2>
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center p-3 fst-italic">
+        <p>Acesse nossas redes:</p>
+        <i class="bi bi-whatsapp"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-tiktok"></i>
+        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
+    <script>
+        // Controla a visibilidade das opções de acessibilidade
+        const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
+        const opcoesAcessibilidade = document.getElementById('opcoes-acessibilidade');
+
+        botaoAcessibilidade.addEventListener('click', () => {
+            const expanded = botaoAcessibilidade.getAttribute('aria-expanded') === 'true' || false;
+
+            botaoAcessibilidade.setAttribute('aria-expanded', !expanded);
+            opcoesAcessibilidade.style.display = expanded ? 'none' : 'block';
+        });
+
+        // Funções para aumentar/diminuir o tamanho da fonte
+        document.getElementById('aumentar-fonte').addEventListener('click', () => {
+            document.body.style.fontSize = '1.2em';  // Aumenta o tamanho da fonte
+        });
+
+        document.getElementById('diminuir-fonte').addEventListener('click', () => {
+            document.body.style.fontSize = '1em';  // Volta para o tamanho normal da fonte
+        });
+
+        // Alternar contraste (simples exemplo)
+        document.getElementById('alterna-contraste').addEventListener('click', () => {
+            document.body.classList.toggle('alto-contraste');
+        });
+    </script>
+
+</body>
+
+</html>

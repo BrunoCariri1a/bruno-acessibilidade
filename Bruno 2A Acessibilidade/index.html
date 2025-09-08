@@ -2,153 +2,264 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Neymar Maravilhoso</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neymar The Best</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+        /* Estilo básico para deixar mais organizado e legível */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 1em;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1.5rem 0;
+        }
+
+        header nav a.nav-link {
+            color: white;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+
+        header nav a.nav-link:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h1,
+        h2 {
+            font-weight: 700;
+        }
+
+        /* Botão acessibilidade */
+        #acessibilidade {
+            position: relative;
+        }
+
+        .opcoes-acessibilidade {
+            position: absolute;
+            right: 0;
+            top: 3rem;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+        }
+
+        .opcoes-acessibilidade button {
+            margin: 0 0.25rem;
+        }
+
+        /* Alto contraste */
+        .alto-contraste {
+            background-color: black !important;
+            color: yellow !important;
+        }
+
+        .alto-contraste a,
+        .alto-contraste button {
+            color: yellow !important;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #adb5bd;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        footer i {
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            color: #ffc107;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="p-5">
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
+    <header>
+        <nav class="container d-flex justify-content-between align-items-center" aria-label="Menu principal">
+            <h1 class="mb-0">Neymar The Best</h1>
+            <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="#porque-neymar">Por que Neymar?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#biografia">Biografia</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
-            <div id="acessibilidade" class="menu-acessibilidade"> 
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false" aria-controls="opcoes-acessibilidade" aria-label="Abrir opções de acessibilidade">
+            <div id="acessibilidade" class="menu-acessibilidade">
+                <button
+                    id="botao-acessibilidade"
+                    class="btn btn-light fw-bold"
+                    aria-expanded="false"
+                    aria-controls="opcoes-acessibilidade"
+                    aria-label="Abrir opções de acessibilidade"
+                >
                     Acessibilidade
                 </button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista" style="display: none;">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores">
+                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade" style="display: none;">
+                    <button id="aumentar-fonte" class="btn btn-outline-primary fw-bold" aria-label="Aumentar o tamanho da fonte">
+                        A+
+                    </button>
+                    <button id="diminuir-fonte" class="btn btn-outline-primary fw-bold" aria-label="Diminuir o tamanho da fonte">
+                        A-
+                    </button>
+                    <button id="alterna-contraste" class="btn btn-outline-primary fw-bold" aria-label="Alternar contraste">
                         <i class="bi bi-brightness-high"></i>
-                    </button>         
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container my-5">
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Bem-vindo ao Neymar Maravilhoso</h1>
-                    <img src="img/logo-2.png" class="mb-3" width="563" height="278" loading="lazy">
-                    <a href="#nossahistoria" class="btn btn-primary btn-lg botao-inicio fw-semibold">Conheça a História!</a>
-                </div>
-                <img src="img/neymar.jpg" alt="Neymar jogando futebol" title="Neymar, craque do futebol brasileiro" class="img-fluid img-inicio">
-            </div>
+    <main class="container" tabindex="-1">
+        <section id="inicio" aria-label="Seção inicial de boas-vindas">
+            <h2 class="mb-4">Bem-vindo ao site oficial do maior craque do futebol: Neymar Jr.</h2>
+            <p>
+                Neymar da Silva Santos Júnior, conhecido simplesmente como Neymar, é um dos jogadores mais talentosos e
+                influentes do futebol mundial. Acompanhe aqui sua trajetória, conquistas e os motivos que o tornam o melhor
+                jogador do mundo.
+            </p>
         </section>
 
-        <section id="nossahistoria" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção sobre os melhores momentos da carreira de Neymar">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center ">
-                    <img src="img/neymar-em-campo.jpg" class="rounded-pill" width="273" height="331" loading="lazy">
-                </div>
-                <div class="col-5">
-                    <h2>Os Melhores Momentos de Neymar</h2>
-                    <p class="p-2">Neymar Jr. é considerado um dos maiores talentos do futebol mundial. Sua carreira começou
-                        no Santos, onde conquistou a Copa Libertadores e foi eleito o melhor jogador da América. Posteriormente,
-                        Neymar fez história no Barcelona, ao lado de Messi e Suárez, formando o temido trio MSN. Com o PSG, ele
-                        continuou sua jornada de conquistas, incluindo o título da Ligue 1 e a chegada à final da Liga dos Campeões.
-                        Além disso, sua marca na Seleção Brasileira também é notável, com vitórias em Copas das Confederações e
-                        medalha de ouro olímpica. Neymar é admirado por sua habilidade, visão de jogo e capacidade de fazer
-                        gols inesquecíveis.</p>
-                </div>
-            </div>
+        <section id="porque-neymar" aria-label="Justificativas do porquê Neymar é o melhor do mundo">
+            <h2>Por que Neymar é o melhor do mundo?</h2>
+            <ul>
+                <li><strong>Habilidade Técnica:</strong> Neymar é reconhecido pela sua incrível capacidade de drible, controle de bola e criatividade dentro de campo.</li>
+                <li><strong>Versatilidade:</strong> Pode atuar tanto como atacante, ponta ou meia, sempre influenciando diretamente o resultado das partidas.</li>
+                <li><strong>Gols e Assistências:</strong> Além de marcar gols decisivos, Neymar tem visão de jogo para criar oportunidades para os companheiros.</li>
+                <li><strong>Impacto Internacional:</strong> Sua presença em grandes clubes europeus e na Seleção Brasileira elevou o padrão do futebol brasileiro.</li>
+                <li><strong>Conquistas Importantes:</strong> Libertadores, títulos nacionais e internacionais, além de medalha olímpica, refletem sua qualidade e liderança.</li>
+                <li><strong>Carisma e Influência:</strong> Neymar inspira milhões de fãs no mundo todo, sendo referência para jovens atletas.</li>
+            </ul>
         </section>
 
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Galeria de Momentos</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/neymar-campeao-libertadores.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/neymar-no-barcelona.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
-                <div class="row mt-4 justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/neymar-no-psg.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/neymar-olimpiadas.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
-             </div>
+        <section id="biografia" aria-label="Biografia e carreira de Neymar">
+            <h2>Biografia e carreira</h2>
+            <p>
+                Neymar nasceu em 5 de fevereiro de 1992, em Mogi das Cruzes, São Paulo. Sua carreira profissional começou no Santos FC, onde rapidamente se destacou como uma das maiores promessas do futebol.
+            </p>
+            <p>
+                <strong>Números marcantes da carreira:</strong>
+            </p>
+            <ul>
+                <li><strong>Santos FC (2009-2013):</strong> 230 jogos, 136 gols, campeão da Copa Libertadores de 2011.</li>
+                <li><strong>FC Barcelona (2013-2017):</strong> 186 jogos, 105 gols, conquistou 2 La Liga, 3 Copa del Rey, 1 Liga dos Campeões da UEFA (2015).</li>
+                <li><strong>Paris Saint-Germain (2017-presente):</strong> Mais de 200 jogos, mais de 120 gols, vários títulos da Ligue 1 e final da Liga dos Campeões (2020).</li>
+                <li><strong>Seleção Brasileira:</strong> Mais de 120 partidas e 75 gols, campeão da Copa das Confederações (2013) e medalha de ouro olímpica (2016).</li>
+            </ul>
+            <p>
+                Neymar é reconhecido mundialmente como um dos atacantes mais completos, unindo técnica, velocidade, inteligência tática e faro de gol.
+            </p>
         </section>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario">
-                    <h2 class="mb-3">Entre em Contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar Mensagem</button>
-                        </div>
-                    </form>
+        <section id="contato" aria-label="Formulário de contato">
+            <h2>Entre em Contato</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        class="form-control"
+                        placeholder="Digite seu nome completo"
+                        aria-required="true"
+                    />
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Digite seu email"
+                        aria-required="true"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        class="form-control"
+                        rows="4"
+                        placeholder="Escreva sua mensagem"
+                        aria-required="true"
+                    ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary fw-bold">Enviar Mensagem</button>
+            </form>
         </section>
     </main>
 
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
+    <footer>
+        <p>Acesse nossas redes sociais:</p>
+        <a href="#" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+        <p class="mt-3 fst-italic">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
     <script>
-        // Controla a visibilidade das opções de acessibilidade
+        // Controle do menu de acessibilidade
         const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
         const opcoesAcessibilidade = document.getElementById('opcoes-acessibilidade');
 
         botaoAcessibilidade.addEventListener('click', () => {
-            const expanded = botaoAcessibilidade.getAttribute('aria-expanded') === 'true' || false;
-
+            const expanded = botaoAcessibilidade.getAttribute('aria-expanded') === 'true';
             botaoAcessibilidade.setAttribute('aria-expanded', !expanded);
             opcoesAcessibilidade.style.display = expanded ? 'none' : 'block';
         });
 
-        // Funções para aumentar/diminuir o tamanho da fonte
-        document.getElementById('aumentar-fonte').addEventListener('click', () => {
-            document.body.style.fontSize = '1.2em';  // Aumenta o tamanho da fonte
+        // Funções para aumentar/diminuir fonte
+        const aumentarFonteBtn = document.getElementById('aumentar-fonte');
+        const diminuirFonteBtn = document.getElementById('diminuir-fonte');
+        const body = document.body;
+
+        let fontSize = 1; // em rem
+
+        aumentarFonteBtn.addEventListener('click', () => {
+            if (fontSize < 2) {
+                fontSize += 0.1;
+                body.style.fontSize = fontSize.toFixed(1) + 'rem';
+            }
         });
 
-        document.getElementById('diminuir-fonte').addEventListener('click', () => {
-            document.body.style.fontSize = '1em';  // Volta para o tamanho normal da fonte
+        diminuirFonteBtn.addEventListener('click', () => {
+            if (fontSize > 0.8) {
+                fontSize -= 0.1;
+                body.style.fontSize = fontSize.toFixed(1) + 'rem';
+            }
         });
 
-        // Alternar contraste (simples exemplo)
-        document.getElementById('alterna-contraste').addEventListener('click', () => {
-            document.body.classList.toggle('alto-contraste');
+        // Alternar contraste
+        const alternaContrasteBtn = document.getElementById('alterna-contraste');
+        alternaContrasteBtn.addEventListener('click', () => {
+            body.classList.toggle('alto-contraste');
         });
     </script>
-
 </body>
 
 </html>
